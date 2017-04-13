@@ -1,0 +1,1 @@
+SELECT AVG(pop) FROM female_pop_text WHERE zip LIKE '75%'

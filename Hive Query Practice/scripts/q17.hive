@@ -1,0 +1,5 @@
+set hive.cli.print.header=true; 
+ 
+SELECT tmp.a as FirstTwo, sum(tmp.b) as NumberOfZipCodes 
+from (SELECT SUBSTR(zip,0,2) as a, count(zip) as b from total_pop_text GROUP BY zip) tmp
+GROUP BY tmp.a; 

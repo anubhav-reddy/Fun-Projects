@@ -1,0 +1,4 @@
+CREATE TABLE female_pop_text  (zip INT, pop FLOAT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+
+LOAD DATA LOCAL INPATH '../data/zip_femalepop.csv' OVERWRITE INTO TABLE female_pop_text;

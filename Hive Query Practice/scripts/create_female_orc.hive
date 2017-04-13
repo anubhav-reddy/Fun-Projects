@@ -1,0 +1,2 @@
+CREATE TABLE female_pop_orc  (zip INT, pop FLOAT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC;
+INSERT INTO TABLE female_pop_orc SELECT * FROM female_pop_text;

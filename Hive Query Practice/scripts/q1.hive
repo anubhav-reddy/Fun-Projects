@@ -1,0 +1,1 @@
+SELECT a.zip FROM total_pop_text AS a LEFT OUTER JOIN male_pop_text AS b ON a.zip = b.zip WHERE b.zip IS NULL

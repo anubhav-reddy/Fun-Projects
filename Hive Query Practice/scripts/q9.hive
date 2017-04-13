@@ -1,0 +1,7 @@
+SELECT a.zip, a.pop-b.pop as popdiff 
+FROM male_pop_text as a 
+FULL JOIN 
+female_pop_text as b 
+ON a.zip = b.zip 
+SORT BY popdiff DESC 
+LIMIT 5

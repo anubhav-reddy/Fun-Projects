@@ -1,0 +1,1 @@
+SELECT zip, pop from female_pop_text SORT BY pop, zip ASC LIMIT 3;

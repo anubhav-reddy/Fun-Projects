@@ -1,0 +1,1 @@
+select input as FirstNumber, SUM(pop) as Totalpop from total_pop_text WHERE zip LIKE :input || '%';

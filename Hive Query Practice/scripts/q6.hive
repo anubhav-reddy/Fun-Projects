@@ -1,0 +1,1 @@
+SELECT AVG(pop) FROM total_pop_text

@@ -1,0 +1,2 @@
+SELECT zip, pop FROM total_pop_text SORT BY pop DESC LIMIT 3 ; 
+

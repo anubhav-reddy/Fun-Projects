@@ -1,0 +1,11 @@
+set hive.cli.print.header=true;      
+
+CREATE OR REPLACE VIEW view1 as
+SELECT tmp.mzip as ZIP, tmp.mpop as Malepop, tmp.fpop as Femalepop, tmp.tpop as Totalpop FROM (
+select a.zip as mzip, a.pop as mpop, b.pop as fpop, c.pop as tpop from male_pop_text as a
+FULL JOIN
+female_pop_text as b ON a.zip = b.zip
+FULL JOIN total_pop_text as c ON b.zip = c.zip) tmp;
+
+SELECT view1.zip as zip, view1.Malepop as Malepop, view1.Femalepop as Femalepop, view1.totalpop as Totalpop 
+from view1 where zip NOT like '7%' AND zip not like '9%';

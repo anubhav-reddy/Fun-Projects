@@ -1,0 +1,3 @@
+CREATE TABLE total_pop_orc  (zip INT, pop FLOAT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC;
+
+INSERT INTO TABLE total_pop_orc SELECT * FROM total_pop_text;

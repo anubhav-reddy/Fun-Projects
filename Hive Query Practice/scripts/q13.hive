@@ -1,0 +1,5 @@
+set hive.cli.print.header=true;
+
+select ${hivevar:num} as FirstNumber, sum(pop) as Totalpop  from total_pop_text where zip LIKE '${hivevar:num}%';
+
+
